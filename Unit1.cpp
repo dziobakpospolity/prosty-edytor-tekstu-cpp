@@ -74,10 +74,10 @@ void __fastcall TForm1::WyodrebnijString()
 		int lz2 = lz->Count;
 		int la2 = la->Count;
 		int iloscznakow = text.Length() - la2 +1;
-		StatusBar1->Panels->Items[0]->Text = "Znaków: "+ IntToStr(iloscznakow);
-		StatusBar1->Panels->Items[1]->Text = "S³ów: "+ IntToStr(ls2 + la2 -2);
-		StatusBar1->Panels->Items[2]->Text = "Zdañ: "+IntToStr(lz2 - 1);
-		StatusBar1->Panels->Items[3]->Text = "Akapitów: "+IntToStr(la2);
+		StatusBar1->Panels->Items[0]->Text = "ZnakÃ³w: "+ IntToStr(iloscznakow);
+		StatusBar1->Panels->Items[1]->Text = "SÅ‚Ã³w: "+ IntToStr(ls2 + la2 -2);
+		StatusBar1->Panels->Items[2]->Text = "ZdaÅ„: "+IntToStr(lz2 - 1);
+		StatusBar1->Panels->Items[3]->Text = "AkapitÃ³w: "+IntToStr(la2);
 
 
 	TTablica tabSlow;
@@ -96,7 +96,7 @@ void __fastcall TForm1::WyodrebnijString()
 		StatusBar3->Panels->Items[i-10]->Text = IntToStr(i) + " liter: " + IntToStr(tabSlow[i]);
 	}
 
-	StatusBar3->Panels->Items[9]->Text = "20 i wiêcej liter: " + IntToStr(tabSlow[20]);
+	StatusBar3->Panels->Items[9]->Text = "20 i wiÄ™cej liter: " + IntToStr(tabSlow[20]);
 }
  TStringList *TForm1::Tokenize (String s,String delimiter)
 {
@@ -117,7 +117,7 @@ void __fastcall TForm1::WyodrebnijString()
  s=s.SubString(delimp+1,l-delimp);
  delimp = s.Pos(delimiter);
  } while (delimp != 0);
- StringList->Add(s); // dodanie tego co zosta³o na koñcu
+ StringList->Add(s); // dodanie tego co zostaÅ‚o na koÅ„cu
  }
  else StringList->Add(s);
  return StringList;  }
@@ -145,10 +145,10 @@ void __fastcall TForm1::Action5Execute(TObject *Sender)
 void TForm1::LiczZnaki(TStringList *slowa , TTablica &TablicaWynikowa )
 {
  int i, dl;
- // najpierw zainicjujmy tablicê wyników
+ // najpierw zainicjujmy tablicÄ™ wynikÃ³w
  for (i = 1; i< max_n_znakow; i++)
  TablicaWynikowa[i] = 0;
- // nastêpnie policzmy odpowiednie s³owa
+ // nastÄ™pnie policzmy odpowiednie sÅ‚owa
  for (i=0; i<slowa->Count; i++)
  {
  dl = (*slowa)[i].Length();
@@ -157,7 +157,8 @@ void TForm1::LiczZnaki(TStringList *slowa , TTablica &TablicaWynikowa )
  else if (dl > 0)
  TablicaWynikowa[dl] = TablicaWynikowa[dl] + 1;
  }
-}
+}
+
 
 void __fastcall TForm1::statystExecute(TObject *Sender)
 {
